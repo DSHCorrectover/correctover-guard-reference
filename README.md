@@ -121,5 +121,8 @@ redistributed.
 ## Author & citation
 
 Guigui Wang (Correctover), *G-G Parameter-Risk Pool*, v1.0.0, 2026-10-17.
-Please cite this repository and the archived Zenodo release (DOI to be added)
-when you use the pool or the evidence-view design.
+Please cite this repository and the archived Zenodo release
+([10.5281/zenodo.23430965](https://doi.org/10.5281/zenodo.23430965); concept
+record: [10.5281/zenodo.23430964](https://doi.org/10.5281/zenodo.23430964))
+when you use the pool or the evidence-view design. This is an individual
+submission; it is not an RFC and carries no IETF endorsement.

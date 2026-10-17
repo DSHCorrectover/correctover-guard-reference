@@ -18,9 +18,16 @@ keywords:
   - fail-closed guard
   - obfuscation benchmark
 repository-code: "https://github.com/DSHCorrectover/correctover-guard-reference"
-url: "https://github.com/DSHCorrectover/correctover-guard-reference"
-# The Zenodo DOI is added after the deposit is minted.
+url: "https://doi.org/10.5281/zenodo.23430965"
+doi: "10.5281/zenodo.23430965"
+# This is an individual submission, not an RFC; it carries no IETF endorsement.
 identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23430964"
+    description: "Zenodo concept record (always resolves to the latest version)"
   - type: doi
     value: "10.5281/zenodo.23365412"
     description: "Related: CCS parameter-risk Internet-Draft -01"
+  - type: doi
+    value: "10.5281/zenodo.21783722"
+    description: "Related: CCS Internet-Draft concept record"
