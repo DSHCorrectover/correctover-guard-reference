@@ -1,0 +1,40 @@
+Correctover Guard — open in-process reference risk-routing layer
+and the G-G Parameter-Risk Pool
+Copyright 2026 Guigui Wang (Correctover)
+
+1. CODE
+The Python source in correctover_guard_ref/, eval/scripts/ and tests/ is made
+available under the Elastic License 2.0 (see LICENSE). In particular, it may
+not be provided to third parties as a hosted or managed service that exposes a
+substantial set of its features.
+
+2. DATA & EXPERIMENT ARTIFACTS
+The benchmark dataset (eval/vector-pool/dev.jsonl, eval/vector-pool/smoke.jsonl,
+eval/vector-pool/manifest.json) and the experiment records and figures
+(eval/runs/, eval/figures/) are separately licensed under
+Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0);
+see DATA-LICENSE. Reuse requires attribution and ShareAlike.
+
+3. SCOPE — WHAT THIS IS NOT
+This repository is an in-process REFERENCE implementation: it contains the
+danger-rule surface, the schema profiling layer and the evidence-view
+normalization tier. It does NOT contain and must not be mistaken for the
+production Correctover engine. The proprietary pieces that are deliberately
+excluded are:
+  - the independent, cross-process fail-closed verifier;
+  - the pinned Ed25519 trust root and the signed adjudication-receipt kernel;
+  - the fail-closed IPC transport.
+The verification STANDARD those pieces implement is open; see STANDARD.md.
+
+4. SEALED HOLDOUT
+A 200-vector holdout split exists but is intentionally NOT distributed in this
+repository and was not consulted while the rules were developed. It is reserved
+for a single post-freeze, no-tuning confirmation.
+
+5. THIRD-PARTY SCHEMA SOURCE
+The 229,539 live-MCP tool-schema rows used to derive benign parameters are
+third-party static-schema content and are not redistributed here.
+
+6. TRADEMARKS
+"Correctover" and "AI Reliability" are names of the author. No trademark
+license is granted by the LICENSE or this NOTICE.

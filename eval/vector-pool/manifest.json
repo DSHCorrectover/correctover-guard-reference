@@ -1,0 +1,131 @@
+{
+ "assets": {
+  "conformance_v1_4_0": "receipt-structure conformance asset only; excluded from this pool (no parameter attack payloads); unrelated to interception rate",
+  "schema_snapshot": {
+   "byte_frozen": "2026-10-12",
+   "contains": "tool name, parameter name/description/classes, G-G labels (STATIC SCHEMA ONLY)",
+   "excludes": "no payload run-values, no attack loads",
+   "path": "poc/atlas-compliance-audit-20261013/data-out/live_tools_labels.csv",
+   "rows": 229539
+  }
+ },
+ "citation_rule": "Only the 600-vector pool (dev+holdout) may back external/paper/standard metrics; the 16-vector smoke split is CI-only and never externally cited.",
+ "created_at": "2026-10-17",
+ "generator": "scripts/build_vector_pool.py",
+ "limitations": "Vectors instantiate the G-G parameter-risk paradigm via deterministic family x variant templates. They do NOT cover unknown, out-of-distribution escape forms. Benign values are realistic synthetic values placed on real 229k-snapshot parameters (raw schemas are not available locally). Whole-value obfuscation vectors are expected FN's on the current engine and measure a future normalization tier. Not a benchmark claim until a third-party runner evaluates this frozen pool.",
+ "lock_policy": {
+  "dev_same_family_substitutes": [
+   "chmod 4755 (SUID)",
+   "chmod 777 /var/www/tmp",
+   "DROP TABLE accounts;",
+   "TRUNCATE TABLE orders;",
+   "DELETE FROM sessions;"
+  ],
+  "holdout": "sealed; dev iteration MUST NOT read holdout or tune against it; exactly ONE evaluation after rule freeze, via the gated harness (run ledger)",
+  "locked_cases_holdout_only": [
+   "chmod 777 /etc/passwd",
+   "DELETE FROM users WHERE"
+  ],
+  "smoke": "16 legacy literals; CI regression on every commit; not citable as an evaluation result"
+ },
+ "public_release": "1.0.0 (2026-10-17)",
+ "seed": 20261017,
+ "seed_derivation": "sha256(tag) int32; deterministic, PYTHONHASHSEED independent",
+ "spec_version": "1.0",
+ "splits": {
+  "dev": {
+   "by_class": {
+    "attack/command": 100,
+    "attack/credential": 32,
+    "attack/money": 10,
+    "attack/ordinary": 12,
+    "attack/url": 46,
+    "benign/command": 29,
+    "benign/credential": 23,
+    "benign/filesystem": 44,
+    "benign/money": 27,
+    "benign/ordinary": 44,
+    "benign/url": 33
+   },
+   "by_family": {
+    "benign": 200,
+    "chmod-danger": 12,
+    "cloud-credential-path": 12,
+    "cloud-metadata-url": 18,
+    "command-expansion": 12,
+    "credential-exfiltration": 4,
+    "credential-secret": 28,
+    "destructive-sql": 16,
+    "downloader-pipe": 12,
+    "force-delete-root": 7,
+    "internal-endpoint-url": 16,
+    "money-bound": 10,
+    "ordinary-smuggle": 12,
+    "powershell-cradle": 7,
+    "reverse-shell": 12,
+    "sensitive-file-read": 11,
+    "shell-chaining": 11
+   },
+   "by_polarity": {
+    "attack": 200,
+    "benign": 200
+   },
+   "by_variant": {
+    "base64": 38,
+    "hex": 38,
+    "lexical": 10,
+    "nfkc": 37,
+    "plain": 236,
+    "split": 41
+   },
+   "file": "dev.jsonl",
+   "sha256_file": "248c5cd25201a0c9749fe1e7e0e5ce156099eb56821f17de9cf8fcb5e07af4fd",
+   "vectors": 400
+  },
+  "holdout_note": "A 200-vector sealed holdout split exists for a single no-tuning confirmation but is intentionally NOT published and is absent from this repository.",
+  "pool_construction": {
+   "ci_smoke_separate": 16,
+   "note": "The 600-vector frozen pool = 400 published dev + 200 sealed holdout. The 16 smoke vectors are a separate CI sanity set, not part of the frozen baseline.",
+   "published_dev": 400,
+   "sealed_holdout_not_published": 200,
+   "total_pool": 600
+  },
+  "smoke": {
+   "by_class": {
+    "attack/command": 12,
+    "attack/credential": 1,
+    "attack/url": 3
+   },
+   "by_family": {
+    "cloud-metadata-url": 1,
+    "command-expansion": 3,
+    "credential-secret": 1,
+    "destructive-sql": 1,
+    "downloader-pipe": 1,
+    "force-delete-root": 1,
+    "internal-endpoint-url": 2,
+    "powershell-cradle": 1,
+    "reverse-shell": 2,
+    "sensitive-file-read": 1,
+    "shell-chaining": 2
+   },
+   "by_polarity": {
+    "attack": 16
+   },
+   "by_variant": {
+    "plain": 16
+   },
+   "file": "smoke.jsonl",
+   "sha256_file": "5551a43f09318a3b2ae310ee8a86675998eff808a24b15a74cd950000683be08",
+   "vectors": 16
+  }
+ },
+ "variant_taxonomy": {
+  "base64": "Base64 whole-value encoding",
+  "hex": "\\xHH hex-escape encoding",
+  "lexical": "\u8bcd\u6cd5\u4f2a\u88c5 (scientific notation / percent-encoding / trailing-dot host)",
+  "nfkc": "NFKC full-width compatibility obfuscation",
+  "plain": "\u539f\u59cb\u660e\u6587",
+  "split": "\u5206\u6bb5\u6ce8\u5165 (quote-split / $IFS / comment-newline / $(echo) concat)"
+ }
+}

@@ -1,0 +1,32 @@
+Dataset license — G-G Parameter-Risk Pool (published splits)
+=============================================================
+
+The following artifacts are licensed to you under the
+Creative Commons Attribution-ShareAlike 4.0 International License (CC-BY-SA-4.0):
+
+  eval/vector-pool/dev.jsonl
+  eval/vector-pool/smoke.jsonl
+  eval/vector-pool/manifest.json
+  eval/runs/
+  eval/figures/
+
+Full legal text: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by-sa/4.0/
+SPDX: CC-BY-SA-4.0
+
+Under this license you may copy, redistribute, remix and adapt these artifacts,
+including for commercial use, provided that you:
+
+  1. give appropriate credit, provide a link to the license, and indicate if
+     changes were made (cite: Guigui Wang (Correctover), "G-G Parameter-Risk
+     Pool", v1.0.0, 2026-10-17, plus the Zenodo DOI once assigned); and
+  2. distribute any adapted/extended vector set under the SAME license
+     (ShareAlike).
+
+This means the frozen, individually SHA-256-addressed attack/benign vectors may
+be used to benchmark or market other products, but the resulting benchmark set
+and any extensions carry the same attribution + ShareAlike obligations.
+
+Note: the code in this repository is under the Elastic License 2.0 (see
+LICENSE), not CC-BY-SA-4.0. The sealed holdout split is not licensed here
+because it is not published.

@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "correctover-guard-reference"
+version = "1.0.0"
+description = "Open in-process reference guard and the byte-frozen G-G parameter-risk benchmark"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Elastic-2.0 (code); CC-BY-SA-4.0 (dataset)" }
+authors = [
+    { name = "Guigui Wang (Correctover)" },
+]
+keywords = [
+    "ai-agent",
+    "mcp",
+    "security",
+    "runtime-verification",
+    "tool-call-injection",
+    "obfuscation",
+    "benchmark",
+    "fail-closed",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Intended Audience :: Developers",
+    "Topic :: Security",
+    "Operating System :: POSIX",
+]
+# The reference guard and evaluator use only the Python standard library.
+# matplotlib/numpy are needed only to regenerate the figure.
+dependencies = []
+
+[project.optional-dependencies]
+figure = ["matplotlib>=3.5", "numpy>=1.20"]
+test = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://correctover.com"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["correctover_guard_ref*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
