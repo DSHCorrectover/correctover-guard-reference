@@ -17,7 +17,8 @@ keywords:
   - runtime verification
   - fail-closed guard
   - obfuscation benchmark
-repository-code: "REPLACE_WITH_GITHUB_URL"
+repository-code: "https://github.com/DSHCorrectover/correctover-guard-reference"
+url: "https://github.com/DSHCorrectover/correctover-guard-reference"
 # The Zenodo DOI is added after the deposit is minted.
 identifiers:
   - type: doi

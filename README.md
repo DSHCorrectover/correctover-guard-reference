@@ -1,5 +1,8 @@
 # Correctover Guard — open reference layer & G-G Parameter-Risk Pool
 
+<https://github.com/DSHCorrectover/correctover-guard-reference>
+
+
 An **independent, fail-closed philosophy** for verifying AI-agent tool calls,
 and a **byte-frozen, third-party-reproducible benchmark** for the case plaintext
 scanners miss: parameter-level attacks hidden by encoding or lexical
