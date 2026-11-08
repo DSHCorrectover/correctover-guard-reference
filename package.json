@@ -1,0 +1,23 @@
+{
+  "name": "correctover-guard-reference",
+  "version": "0.1.0",
+  "description": "Correctover Guard - Reference implementation for MCP runtime behavior protection. Integrates CCS verification, runtime guarding, and signed receipts into a complete security layer.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test tests/*.test.ts",
+    "dev": "tsc --watch",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": ["mcp", "security", "runtime-protection", "ai-agent", "correctover"],
+  "author": "Correctover",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
